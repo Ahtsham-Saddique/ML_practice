@@ -19,3 +19,18 @@ y = data['petal length (cm)']     # Target
 # Create and train model
 model = LinearRegression()
 model.fit(X, y)
+
+# Predict
+y_pred = model.predict(X)
+
+# Print results
+print("Slope:", model.coef_[0])
+print("Intercept:", model.intercept_)
+
+# Plot graph
+plt.scatter(X, y)
+plt.plot(X, y_pred)
+plt.title("Linear Regression - Iris Dataset")
+plt.xlabel("Sepal Length")
+plt.ylabel("Petal Length")
+plt.show()
